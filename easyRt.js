@@ -1,9 +1,8 @@
 const place = document.querySelector("#local").value;
 console.log(place)
 const size = document.getElementById("size").value;
-//let price = document.getElementById("price").value;
+const reSult = document.querySelector(".principal");
 let submit = document.getElementById("submit-btn");
-
 
 
 
@@ -20,16 +19,18 @@ fetch('http://localhost:7000/', { method: "GET" }
     })
 
 function housePrice(local, hSize) {
-    console.log(size)
-    /* houseData.map(user => {    
+    //console.log(size)
+    reSult.innerText = "work work work"; 
+    houseData.map(user => {   
         if ((local === user.Area) && (hSize === user.Size)) {
             // console.log(user.Price)
+            
         } else {
             // console.log("nothing to show")
         }
         return user;
     }
-    ) */
+    )
 }
 
 submit.addEventListener("click", () => {
