@@ -115,48 +115,43 @@ li a{
     font-size: 30px;
 }
 
-.illustration{
-    display: inline-block;
-    margin: 0px 20px 0px 20px;
-    background-color: #ffffff;
-    height: 200px;
-    width: 400px;
-}
-
 .collection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-top: 50px;
-    align-self: center;
+    align-content: center;
     padding-left: 30px;
 }
 
+.illustration{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 100px;
+    background-color:#ffffff;
+    height: 450px;
+    width: 400px;
+}
+
 .illustration h2{
-    text-align: start;
+    text-align: center;
     padding-top: 40px;
     font-size: 22px;
 
 }
 .illustration p{
     margin-top: 20px;
-    text-align: start;
+    text-align: center;
     text-justify: auto;
     font-size: 18px;
 }
-.illustration img{
-    display: block;
-    margin-left: 0px;
-    margin-right: auto;
-    object-fit: cover;
-    height: 100%;
-    width: 50%;
-}
 
-.illustration .a img{
+.illustration img{
+    position: relative;
     display: block;
-    margin-left: 0px;
     margin-right: auto;
-   
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 90%;
 }
 
 .email{
@@ -215,7 +210,7 @@ li a{
 
 /* Mobile Responsiveness */
 
-@media (max-width:700px){
+@media only screen and (max-width:768px){
     *{
         margin: 0;
         padding: 0;
@@ -334,7 +329,6 @@ li a{
     .second-page{
         display: block;
         background-color: #ffffff;
-        margin-right: 0px;
         width: 100%;
         height: max-content;
     }
@@ -342,7 +336,7 @@ li a{
     .second-page h1{
         padding-top: 60px;
         padding-left: 30px;
-        text-align: start;
+        text-align: center;
         font-size: 22px;
         font-weight: lighter;
         margin-right: 15px;
@@ -350,53 +344,45 @@ li a{
     }
 
     .collection{
+        display: flex;
         position: relative;
-        display: block;
-        padding-top: 50px;
-        padding-left: 15px;
-        margin-right: 0px;
+        background-color: #ffffff;
+        padding: 0px;
+        margin-left: -20px;
         overflow: hidden;
     }
-    
-    .illustration .a{
-        display: block;
+
+    .illustration {
+        flex-direction: column;
+        position: relative;
         background-color: #ffffff;
-        height: 300px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+        height: 400px;
         width: 100%;
-    }
-
-    .illustration .b{
-        display: block;
-        background-color: #ffffff;
-        height: 300px;
-        width: 380px;
-    }
-
-    .illustration .c{
-        display: block;
-        background-color: #ffffff;
-        height: 300px;
-        width: 380px;
     }
     
     .illustration h2{
-        text-align: start;
+        text-align: center;
         padding-top: 30px;
         font-size: 22px;
     }
     .illustration p{
-        margin-top: 25px;
-        padding-right: 30px;
-        margin-right: 35px;
-        text-align: start;
+        margin-top: 5px;
+        /* padding-right: 30px;
+        margin-right: 35px; */
+        padding-top: 15px;
+        position: relative;
+        text-align: center;
         text-justify: auto;
         font-size: 18px;
     }
     .illustration img {
-        margin-left: 0px;
+        /* margin-left: 0px; */
         margin-right: auto;
+        margin-left: auto;
         padding-top: 30px;
-        height: 200px;
+        height: 220px;
         width: 280px;
     }
 
@@ -472,3 +458,19 @@ li a{
     position: relative;
     /* margin-top: 140%; */
 }
+
+/* .collection{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-content: center;
+    padding-left: 15px;
+}
+
+.illustration{
+    
+    margin-left: 10px;
+    background-color:#ffffff;
+    height: 450px;
+    width: 400px;
+} */

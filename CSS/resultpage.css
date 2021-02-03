@@ -129,11 +129,13 @@
 
     .carousel{
         position: absolute;
+        background-image:url("/resource/luxury-bedroom.jpg");
+        background-size: cover;
         margin-top: 12%;
         margin-left: 20%;
         border: 10px solid #c2bfbf;
         height: 250px;
-        width: 350px;
+        width: 380px;
     }
 
     .explore{
@@ -196,6 +198,12 @@
         margin-top: 10%;
         height: 350px;
         width: 265px;
+    }
+
+    .navigation-bar ul li a{
+        margin-right: 5px;
+        margin-top: 22px;
+        padding-right: 10px;
     }
 
     .h-detail ul{
@@ -284,14 +292,15 @@
         text-align: center;
         padding: 5px;
         font-size: 18px;
+        font-weight: lighter;
     }
 
     .set img{
         display: block;
         width: 150px;
         margin-top: 10px;
-        /* margin-left: auto; */
-        /* margin-right: auto; */
+        margin-left: auto;
+        margin-right: auto;
     }
 
      .input{
@@ -302,10 +311,9 @@
         margin-right: auto;
         border: none;
         font-size: 16px;
-        border-radius: 10px;
-        
-        
+        border-radius: 10px;  
     }
+
     .explore input{
         width: 200px;
         border: none;
@@ -313,7 +321,7 @@
         border-radius: 10px;
         color: #ffffff;
         padding: 10px 15px;
-
+        margin-bottom: 15px;
     }
 }
 

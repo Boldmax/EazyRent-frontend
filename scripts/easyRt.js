@@ -1,6 +1,6 @@
-const place = document.getElementById("local").value;
-const size = document.getElementById("type").value;
-const rooms = document.getElementById('bedroom').value;
+const place = document.getElementById("local");
+const size = document.getElementById("type");
+const rooms = document.getElementById('bedroom');
 const submited = document.querySelector(".submit-btn");
 const container1 = document.querySelector('.container');
 const seconPage = document.querySelector('.second-page');
@@ -9,9 +9,41 @@ const newPrice = document.getElementById('pickPrice');
 const places = document.getElementById('place');
 const houseType = document.getElementById('house-type');
 const noRoom = document.getElementById('no-rooms');
+const home = document.querySelector('.home')
 
 
 
+submited.addEventListener("click", () => {
+    console.log('button is working')
+    changePrice();
+    changeDetails();
+    changePage();
+});
+
+function newPage() {
+    window.location.href = "resultpage.html"
+}
+
+function changePage() {
+    container1.classList.add('hide');
+    seconPage.classList.add('hide');
+    container2.classList.remove('hide');
+}
+
+
+function changeDetails() {
+    places.innerText = place.options[place.selectedIndex].text;
+    houseType.innerText = size.options[size.selectedIndex].text;
+    noRoom.innerText = rooms.options[rooms.selectedIndex].text;
+}
+
+function changePrice() {
+    newPrice.innerText = `0,000,0000`
+}
+
+home.addEventListener("click", () => {
+    location.reload()
+})
 
 /* function housePrice(local, hSize) {
     //console.log(size)  
@@ -27,43 +59,6 @@ const noRoom = document.getElementById('no-rooms');
     )
 } */
 //http://lagos-rent-api.herokuapp.com/predict
-
-
-submited.addEventListener("click", () => {
-    changePrice();
-    changeDetails();
-    changePage();
-
-
-    //housePrice(place, size)
-});
-/* function addnew(){
-    var button = document.createElement('div');
-    button.innerText = "work work work";
-    return addText.appendChild(button) 
-} */
-
-function newPage() {
-    window.location.href = "resultpage.html"
-}
-
-function changePage() {
-    container1.classList.add('hide');
-    seconPage.classList.add('hide');
-    container2.classList.remove('hide');
-}
-
-
-function changeDetails() {
-    places.innerText = `${place}`
-    houseType.innerText = `${size}`
-    noRoom.innerText = `${rooms} Rooms`
-}
-
-function changePrice() {
-    newPrice.innerText = `15000,00`
-}
-
 /* fetch('https://api.exchangeratesapi.io/latest', { method: "GET" }
 )
     .then(function (res) {
