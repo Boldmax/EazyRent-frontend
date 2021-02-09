@@ -268,10 +268,20 @@
     }
 
     .evaluation ul p{
-        font-weight: bold;
+        font-size: 12px;
+        font-weight: normal;
         padding-top: 3px;
+        margin-left: 0px;
         text-align: start;
+        width: 200px;
     }
+
+    #pickPrice{
+        font-size: 13px;
+        width: 250px;
+        padding-bottom: 10px;
+    }
+
     .carousel{
         display: block;
         position: relative;

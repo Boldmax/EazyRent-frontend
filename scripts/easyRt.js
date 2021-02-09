@@ -11,32 +11,40 @@ const houseType = document.getElementById('house-type');
 const noRoom = document.getElementById('no-rooms');
 const home = document.querySelector('.home');
 const propertypage = document.querySelector("#propertyPage");
+const newRoomNo = rooms.options[rooms.selectedIndex].text;
+const newPlace = place.options[place.selectedIndex].text;
 
-var payload =
-    {
-        "rooms": 1,
-        "location": "Ogba"
+
+function payload(room, location){
+        this.rooms = room;
+        this.location= location
     };
-
-(async function(){
-   var rawResponse = fetch('http://lagos-rent-api.herokuapp.com/predict/', {
+    var payloader = new payload(newRoomNo, newPlace);
+   
+   function provide(){
+   fetch('http://lagos-rent-api.herokuapp.com/predict/', {
         method: "POST",
-        body: JSON.stringify(payload),
+        body: JSON.stringify(payloader),
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
         },
     })
-    
-    const content = await rawResponse;
-        var data = content.json()
-        console.log(data)
-        
-    }
-)();
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(load){
+        console.log(load.Rent)
+        var result = load.Rent
+        var result2 = result + 50000
+        newPrice.innerText = `From ₦${result} - ₦${result2}`
+    })
+}  
 
 submited.addEventListener("click", () => {
     console.log('button is working')
+    console.log(newRoomNo)
+    provide()
     changePrice();
     changeDetails();
     changePage();
@@ -64,45 +72,9 @@ function changeDetails() {
 }
 
 function changePrice() {
-    newPrice.innerText = `0,000,0000`
+    
 }
 
 home.addEventListener("click", () => {
     location.reload()
 })
-
-    /* function housePrice(local, hSize) {
-        //console.log(size)  
-        houseData.map(user => {
-            if ((local === user.Area) && (hSize === user.Size)) {
-                // console.log(user.Price)
-    
-            } else {
-                // console.log("nothing to show")
-            }
-            return user;
-        }
-        )
-    } */
-    //https://api.exchangeratesapi.io/latest
-    //http://lagos-rent-api.herokuapp.com/predict
-
-//
-
-//fetchData()
-/* <p>Area: ${user.Area}</p>
-<p>Size: ${user.Size}</p> */
-
-/*
-         <p>Price: ${data.Price}</p>
-         </div> `
-         const result = data.Price;
-         return console.log(result) */
-/* const html = data.map(user => {
-   return
-   `<div class= "use">
-   <p>Price: ${user.Price}</p>
-   </div>`
-})
-.join("");
-document.querySelector(".buse").insertAdjacentHTML("afterbegin", html) */
