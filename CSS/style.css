@@ -440,7 +440,7 @@ li a{
         text-align: start;
         padding-top: 30px;
         font-size: 22px;
-        padding-left: 30px;
+        padding-left: 28px;
     }
 
     .illustration p{
@@ -458,7 +458,7 @@ li a{
         margin-right: auto;
         margin-left: auto;
         padding-top: 30px;
-        padding-left: 0px;
+        padding-left: 10px;
         height: 200px;
         width: 240px;
     }
@@ -487,6 +487,10 @@ li a{
         padding-left: 30px;
         text-align: start;
         text-justify: auto;
+    }
+
+    .wrapper{
+        padding-left: 15px;
     }
     
     .email .input{
@@ -533,10 +537,9 @@ li a{
 .lastLayer{
     margin-top: 20px;
     position: relative;
-    /* margin-top: 140%; */
 }
 
-@media only screen and (max-width:360px){
+@media only screen and (max-width:370px){
     .container{
         height: 800px;
     }
