@@ -432,6 +432,7 @@ li a{
         height: 400px;
         width: 100%;
     }
+
     
     .illustration h2{
         text-align: start;
@@ -440,15 +441,14 @@ li a{
         padding-left: 30px;
     }
 
-    .illustration .b h2{
-        text-align: center;
-    }
+
 
     .illustration p{
         margin-top: 5px;
         padding: 0px 20px;
         /* margin-right: 35px; */
         padding-top: 15px;
+        padding-bottom: 15px;
         position: relative;
         text-align: start;
         text-justify: auto;
@@ -537,17 +537,13 @@ li a{
     /* margin-top: 140%; */
 }
 
-@media only screen and (max-width:700px){
-    .illustration h2{
-        padding-left: 100px;
-        text-align: center;
-    }
-
+@media only screen and (max-width:580px){
     .illustration p{
-        padding-left: 100px;
-        text-align: center;
+        padding-left: 10px;
     }
 }
+   
+
 /* .collection{
     display: flex;
     flex-direction: column;
