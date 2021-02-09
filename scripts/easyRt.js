@@ -9,9 +9,31 @@ const newPrice = document.getElementById('pickPrice');
 const places = document.getElementById('place');
 const houseType = document.getElementById('house-type');
 const noRoom = document.getElementById('no-rooms');
-const home = document.querySelector('.home')
+const home = document.querySelector('.home');
+const propertypage = document.querySelector("#propertyPage");
 
+var payload =
+    {
+        "rooms": 1,
+        "location": "Ogba"
+    };
 
+(async function(){
+   var rawResponse = fetch('http://lagos-rent-api.herokuapp.com/predict/', {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+    })
+    
+    const content = await rawResponse;
+        var data = content.json()
+        console.log(data)
+        
+    }
+)();
 
 submited.addEventListener("click", () => {
     console.log('button is working')
@@ -21,8 +43,12 @@ submited.addEventListener("click", () => {
 });
 
 function newPage() {
-    window.location.href = "resultpage.html"
+    window.location.href = "propertypage.html"
 }
+
+propertyPage.addEventListener('click', () => {
+    newPage()
+})
 
 function changePage() {
     container1.classList.add('hide');
@@ -45,28 +71,22 @@ home.addEventListener("click", () => {
     location.reload()
 })
 
-/* function housePrice(local, hSize) {
-    //console.log(size)  
-    houseData.map(user => {
-        if ((local === user.Area) && (hSize === user.Size)) {
-            // console.log(user.Price)
-
-        } else {
-            // console.log("nothing to show")
+    /* function housePrice(local, hSize) {
+        //console.log(size)  
+        houseData.map(user => {
+            if ((local === user.Area) && (hSize === user.Size)) {
+                // console.log(user.Price)
+    
+            } else {
+                // console.log("nothing to show")
+            }
+            return user;
         }
-        return user;
-    }
-    )
-} */
-//http://lagos-rent-api.herokuapp.com/predict
-/* fetch('https://api.exchangeratesapi.io/latest', { method: "GET" }
-)
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (data) {
-        console.log(data)
-    }) */
+        )
+    } */
+    //https://api.exchangeratesapi.io/latest
+    //http://lagos-rent-api.herokuapp.com/predict
+
 //
 
 //fetchData()

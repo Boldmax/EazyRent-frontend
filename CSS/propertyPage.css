@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.pcontainer{
+    position: relative;
+    background-color: lightblue;
+    background-image: url("/resource/Rectangle.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    z-index: 2;
+}
+
+.logo img{
+    width: 150px;
+    margin-top: 14px;
+    margin-left: 15px;
+}
+
+.navigation-bar{
+display: block;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(1, 7, 8, 0.1);
+width: 700px;
+}
+
+.navigation-bar h1{
+    color: #ffffff;
+    font-size: 45px;
+    line-height: normal;
+    
+    text-align: start;
+}
+
+.navigation-bar p{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: start;   
+}
+
+.header{
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.header p{
+    text-align: center;
+    font-size: 25px;
+}
+
+.websites{
+    position: relative;
+    display: flex;
+    
+    margin-top: 30px;
+}
+.websites img {
+    flex-direction: row;
+    padding: 17px;
+    height: 200px;
+    width: 300px;
+    align-self: auto;
+}
+
+#footer{
+    height: 120px;
+    background-color: #000000;
+}
+
+#footer p{
+    padding-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:768px){
+
+    .navigation-bar{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(1, 7, 8, 0.1);
+        width: 400px;
+        }
+
+        .navigation-bar h1{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .navigation-bar p{
+            color: #ffffff;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 23px;
+            font-weight: bold;
+            text-align: start;   
+        }
+
+        .header{
+            display: block;
+            font-size: 25px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header p{
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .web-cont{
+            position: relative;
+            display: flex;
+
+        }
+
+        .websites{
+            flex-direction: column;
+            margin-top: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            align-self: center;
+        }
+
+        .websites img {
+           height: 200px;
+           width: 300px;    
+        }
+
+}
+
+@media only screen and (max-width:375px){
+    .navigation-bar{
+        width: 300px;
+    }
+
+    .navigation-bar h1{
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .pcontainer{
+        height: 380px;
+    }
+
+    .logo img{
+        width: 120px;
+        margin-top: 14px;
+        margin-left: 15px;
+    }
+
+    .navigation-bar p{
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: start;   
+    }
+
+    .navigation-bar p{
+        padding-top: 45px;
+        text-align: center;
+        font-size: 25px;
+    }
+}

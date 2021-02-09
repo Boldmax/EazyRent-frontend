@@ -5,12 +5,12 @@
 .container{
     position: relative;
     background-color: lightblue;
-    background-image: url("/resource/main_background.png");
+    background-image: url("/resource/main_backgroundx.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 680px;
+    height: 720px;
     z-index: 2;
 }
 
@@ -46,37 +46,66 @@ li a{
     font-weight: bold;
     text-decoration: none;
 }
-.landingPage h2{
-    color: #ffffff;
-    background-color: rgba(1, 7, 8, 0.4);
-    width: max-content;
-    font-size: 32px;
-    margin-top: 80px; 
-    margin-left: 30px;
+
+.first-body{
+    display: flex;
+    flex-direction: row;
+    margin-top: 140px;
 }
 
-.landingPage p{
+/* .message{
+    padding-bottom: 250px;
+}
+ */
+.landingPage h2{
     color: #ffffff;
-    background-color: rgba(1, 7, 8, 0.4);
+    background-color: rgba(1, 7, 8, 0.2);
+    width: max-content;
+    font-size: 44px;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-left: 90px;
+    letter-spacing: 2.5px;
+}
+
+/* .form{
+    margin-top: 180px;
+} */
+.message   p{
+    color: #ffffff;
+    background-color: rgba(27, 56, 61, 0.2);
     font-size: 16px;
-    width: 300px;
-    margin-left: 30px;
+    /* width: 300px; */
+    margin-left: 90px;
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    line-height: 35px;
 }
 
 .landingPage .form{
     display: block;
     position: absolute;
-    margin-left: 68%;
+    margin-left: 62%;
     margin-top: -5%;
-    width: 300px;
+    width: 380px;
     height: max-content;
     background-color: #ffffff;
 }
 
 .inputs{
     display: grid;
-    padding-top: 70px;
-    padding: 70px 30px 20px 30px;
+    padding: 30px 30px 20px 30px;
+}
+
+.form .radio{
+    margin-left: 28px;
+    margin-right: 15px;
+    margin-top: 20px;
+    size: 20px;
+}
+
+.form label{
+    font-size: 16px;
 }
 
 .inputs select{
@@ -85,11 +114,13 @@ li a{
     border: 2px solid grey;
     border-radius: 5px;
     color: grey;
+    line-height: 40px;
 }
+
 .inputs input{
     padding: 5px;
     margin-bottom: 20px;
-    border: 2px solid grey;
+    border: 2px solid rgb(175, 175, 175);
     border-radius: 5px;
 }
 
@@ -97,16 +128,19 @@ li a{
     padding-top: 20px;
     text-align: start;
     padding-left: 28px;
+    line-height: 40px;
 }
 
 .form p{
     text-align: start;
     padding-top: 12px;
+    margin-left: 28px;
     background-color: transparent;
-    width: 250px;
-    font-size: 12px;
+    width: 300px;
+    font-size: 14px;
     color: gray;
 }
+
 
 .second-page{
     display: block;
@@ -126,8 +160,8 @@ li a{
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 50px;
+    padding-right: 15px;
     align-content: center;
-    padding-left: 30px;
 }
 
 .illustration{
@@ -136,34 +170,48 @@ li a{
     margin-left: auto;
     margin-left: auto;
     background-color: #ffffff;
+    padding-left: -5px;
     height: 450px;
-    width: 400px;
+    width: 400px; 
+     
+}
+
+.wrapper{
+    border: 2px solid grey;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    box-shadow: 5px 5px 5px #c2bfbf;
+    border-radius: 10px;
+    padding-left: 27px;
 }
 
 .illustration h2{
-    text-align: start;
+    text-align: center;
     padding-top: 40px;
-    font-size: 22px;
-
+    font-size: 27px;
+    width: 330px;
 }
+
 .illustration p{
     margin-top: 20px;
     text-align: start;
     text-justify: auto;
-    font-size: 18px;
+    font-size: 16px;
+    width: 350px;
+    padding-left: 30px;
 }
 
 .illustration img{
     position: relative;
     display: block;
-    margin-right: auto;
-    height: 50%;
-    width: 80%;
+    height: 32%;
+    width: 55%;
+    padding-left: 50px;
 }
 
 .email{
     background-color: grey;
-    height: 220px;
+    height: 240px;
     width: 100%;
 }
 
@@ -199,7 +247,7 @@ li a{
 }
 
 .footer{
-    height: 40px;
+    height: 120px;
     background-color: #000000;
 }
 
@@ -209,7 +257,6 @@ li a{
     color: #ffffff;
     font-weight: bold;
 }
-
 
 .hide{
     display: none;
@@ -230,7 +277,7 @@ li a{
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
-        height: 700px;
+        height: 780px;
         z-index: 2;
     }
 
@@ -252,6 +299,12 @@ li a{
         background-color: transparent;
     }
     
+    .first-body{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
     li{
         float: right;
     }
@@ -270,19 +323,24 @@ li a{
     .landingPage h2{
         color: #ffffff;
         font-size: 25px;
-        margin-top: 50px; 
+        margin-top: 50px;
+        padding: 0px 20px; 
         margin-left: auto;
         margin-right: auto;
-
+        letter-spacing: 1px;
+        background-color: rgba(1, 7, 8, 0.1);
     }
     
-    .landingPage p{
+    .message p{
         color: #ffffff;
         margin-top: 20px;
-        margin-left: 50px;
+        padding: 0px 35px;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 16px;
         font-weight: bold;
         text-align: center;
+        letter-spacing: 1px;
     }
     
     .landingPage .form{
@@ -291,15 +349,15 @@ li a{
         margin-left: auto;
         margin-right: auto;
         margin-top: 5%;
+        margin-bottom: 30px;
         width: 300px;
-        height: 400px;
+        height: max-content;
         background-color: #ffffff;
     }
 
     .inputs{
         display: grid;
-        padding-top: 70px;
-        padding: 70px 30px 20px 30px;
+        padding: 30px 30px 20px 30px;
     }
     
     .inputs select{
@@ -332,8 +390,11 @@ li a{
         text-align: start;
         padding-top: 12px;
         margin-right: 10px;
+        margin-left: 30px;
         font-size: 12px;
         color: gray;
+        width: 270px;
+        line-height: 20px;
     }
 
     .second-page{
@@ -357,8 +418,8 @@ li a{
         display: flex;
         position: relative;
         background-color: #ffffff;
-        padding: 0px;
-        margin-left: -20px;
+        padding-left: 20px;
+        /* margin-left: -20px; */
         overflow: hidden;
     }
 
@@ -367,33 +428,40 @@ li a{
         position: relative;
         background-color: #ffffff;
         padding-right: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
         height: 400px;
         width: 100%;
     }
     
     .illustration h2{
-        text-align: center;
+        text-align: start;
         padding-top: 30px;
         font-size: 22px;
+        padding-left: 30px;
     }
+
+    .illustration .b h2{
+        text-align: center;
+    }
+
     .illustration p{
         margin-top: 5px;
-        /* padding-right: 30px;
-        margin-right: 35px; */
+        padding: 0px 20px;
+        /* margin-right: 35px; */
         padding-top: 15px;
         position: relative;
-        text-align: center;
+        text-align: start;
         text-justify: auto;
-        font-size: 18px;
+        font-size: 16px;
     }
     .illustration img {
         /* margin-left: 0px; */
         margin-right: auto;
         margin-left: auto;
         padding-top: 30px;
-        height: 220px;
-        width: 280px;
+        padding-left: 0px;
+        height: 200px;
+        width: 240px;
     }
 
 
@@ -451,7 +519,7 @@ li a{
     .footer{
         display: block;
         position: relative;
-        height: 40px;
+        height: 120px;
         background-color: #000000;
     }
     
@@ -469,6 +537,17 @@ li a{
     /* margin-top: 140%; */
 }
 
+@media only screen and (max-width:700px){
+    .illustration h2{
+        padding-left: 100px;
+        text-align: center;
+    }
+
+    .illustration p{
+        padding-left: 100px;
+        text-align: center;
+    }
+}
 /* .collection{
     display: flex;
     flex-direction: column;
