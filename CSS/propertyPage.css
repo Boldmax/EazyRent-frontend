@@ -56,12 +56,12 @@ padding-left: 15px;
 .header p{
     text-align: center;
     font-size: 25px;
+    letter-spacing: 2.5px;
 }
 
 .websites{
     position: relative;
     display: flex;
-    
     margin-top: 30px;
 }
 .websites img {
@@ -73,12 +73,13 @@ padding-left: 15px;
 }
 
 #footer{
+    margin-top: 65px;
     height: 120px;
     background-color: #000000;
 }
 
 #footer p{
-    padding-top: 20px;
+    padding-top: 70px;
     text-align: center;
     color: #ffffff;
     font-weight: bold;

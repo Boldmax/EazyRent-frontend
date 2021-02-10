@@ -58,19 +58,19 @@
         padding-top: 10px;
         text-align: center;
         color: #ffffff;
+       
     }
 
     #footer2{
-        margin-top: 64%;
+        margin-top: 74%;
         position: relative;
-        margin-bottom: 0%;
-        height: 120px;
+        margin-bottom: -20%;
+        height: 160px;
         background-color: #000000;
     }
     
     #footer2 p{
-        padding: 20px;
-        /* padding-bottom: 20px; */
+        padding: 70px;
         text-align: center;
         color: #ffffff;
         font-weight: bold;

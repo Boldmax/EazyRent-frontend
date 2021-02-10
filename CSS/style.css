@@ -53,24 +53,20 @@ li a{
     margin-top: 140px;
 }
 
-/* .message{
-    padding-bottom: 250px;
-}
- */
 .landingPage h2{
     color: #ffffff;
-    background-color: rgba(1, 7, 8, 0.5);
+    background-color: rgba(1, 7, 8, 0.3);
     width: max-content;
     font-size: 44px;
-    font-weight: bold;
+    font-weight: lighter;
     margin-top: 80px;
     margin-left: 90px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
 }
 
 .message   p{
     color: #ffffff;
-    background-color: rgba(1, 7, 8, 0.5);
+    background-color: rgba(1, 7, 8, 0.3);
     font-size: 16px;
     margin-left: 90px;
     margin-top: 20px;
@@ -158,7 +154,7 @@ li a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 50px;
+    padding-top: 70px;
     padding-right: 15px;
     align-content: center;
 }
@@ -174,27 +170,20 @@ li a{
     width: 400px;     
 }
 
-.wrapper{
-    
-    padding-bottom: 20px;
-    padding-top: 10px;
-    padding-left: 27px;
-}
-
 .illustration h2{
     text-align: center;
     padding-top: 40px;
-    font-size: 27px;
+    font-size: 24px;
     width: 330px;
 }
 
 .illustration p{
     margin-top: 20px;
-    text-align: start;
+    text-align: center;
     text-justify: auto;
     font-size: 16px;
-    width: 350px;
-    padding-left: 30px;
+    width: 330px;
+    /* padding-left: 30px; */
 }
 
 .illustration img{
@@ -202,7 +191,7 @@ li a{
     display: block;
     height: 32%;
     width: 55%;
-    padding-left: 50px;
+    padding-left: 20px;
     margin-left: 40px;
     border-radius: 15px;
     border: 2px solid grey;
@@ -251,7 +240,7 @@ li a{
 }
 
 .footer p{
-    padding-top: 20px;
+    padding-top: 70px;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
@@ -438,18 +427,20 @@ li a{
         text-align: start;
         padding-top: 30px;
         font-size: 22px;
-        padding-left: 28px;
+        letter-spacing: 1px;
+        /* padding-left: 28px; */
     }
 
     .illustration p{
         margin-top: 5px;
         padding: 0px 15px;
-        padding-top: 15px;
+        padding-top: 10px;
         padding-bottom: 15px;
         position: relative;
-        text-align: start;
+        text-align: center;
         text-justify: auto;
         font-size: 16px;
+        width: 247px;
         
     }
     .illustration img {
@@ -537,13 +528,13 @@ li a{
     position: relative;
 }
 
-@media only screen and (max-width:370px){
+@media only screen and (max-width:350px){
     .container{
         height: 800px;
     }
 
     .illustration p{
-        padding-left: 20px;
+        padding-left: 25px;
         /* text-align: center; */
     }
 
@@ -556,17 +547,14 @@ li a{
 
     .illustration h2{
        /*  text-align: center; */
-        padding-left: 40px;
+        padding-left: 10px;
     }
 
     .illustration p{
         font-size: 14px;
-        padding-left: 30px;
+        padding-left: 13px;
     }
 
-    .wrapper{
-        padding-left: 0px;
-    }
 }
    
 
