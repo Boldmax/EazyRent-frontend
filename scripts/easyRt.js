@@ -1,3 +1,4 @@
+
 const place = document.getElementById("local");
 const size = document.getElementById("type");
 const rooms = document.getElementById('bedroom');

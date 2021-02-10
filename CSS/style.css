@@ -59,7 +59,7 @@ li a{
  */
 .landingPage h2{
     color: #ffffff;
-    background-color: rgba(1, 7, 8, 0.2);
+    background-color: rgba(1, 7, 8, 0.5);
     width: max-content;
     font-size: 44px;
     font-weight: bold;
@@ -68,16 +68,14 @@ li a{
     letter-spacing: 2.5px;
 }
 
-/* .form{
-    margin-top: 180px;
-} */
 .message   p{
     color: #ffffff;
-    background-color: rgba(27, 56, 61, 0.2);
+    background-color: rgba(1, 7, 8, 0.5);
     font-size: 16px;
-    /* width: 300px; */
     margin-left: 90px;
     margin-top: 20px;
+    padding-left: 10px;
+    padding-right: -10px;
     letter-spacing: 1.5px;
     line-height: 35px;
 }
@@ -173,8 +171,7 @@ li a{
     background-color: #ffffff;
     padding-left: -5px;
     height: 450px;
-    width: 400px; 
-     
+    width: 400px;     
 }
 
 .wrapper{
