@@ -175,11 +175,9 @@ li a{
 }
 
 .wrapper{
-    border: 2px solid grey;
+    
     padding-bottom: 20px;
     padding-top: 10px;
-    box-shadow: 5px 5px 5px #c2bfbf;
-    border-radius: 10px;
     padding-left: 27px;
 }
 
@@ -205,6 +203,9 @@ li a{
     height: 32%;
     width: 55%;
     padding-left: 50px;
+    margin-left: 40px;
+    border-radius: 15px;
+    border: 2px solid grey;
 }
 
 .email{
@@ -449,7 +450,7 @@ li a{
         text-align: start;
         text-justify: auto;
         font-size: 16px;
-        padding-left: 0px;
+        
     }
     .illustration img {
         margin-right: auto;
@@ -542,7 +543,8 @@ li a{
     }
 
     .illustration p{
-        padding-left: 10px;
+        padding-left: 20px;
+        /* text-align: center; */
     }
 
     .landingPage .form{
@@ -553,12 +555,13 @@ li a{
     }
 
     .illustration h2{
-        text-align: start;
-        padding-left: 13px;
+       /*  text-align: center; */
+        padding-left: 40px;
     }
+
     .illustration p{
         font-size: 14px;
-        padding: 0px 10px;
+        padding-left: 30px;
     }
 
     .wrapper{

@@ -27,7 +27,7 @@ function getPrice() {
     var newRoomNo = rooms.options[rooms.selectedIndex].value;
     var newPlace = place.options[place.selectedIndex].text;
     var payloader = new payload(newRoomNo, newPlace);
-    fetch('http://lagos-rent-api.herokuapp.com/predict/', {
+    fetch('https://lagos-rent-api.herokuapp.com/predict/', {
         method: "POST",
         body: JSON.stringify(payloader),
         headers: {

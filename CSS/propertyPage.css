@@ -24,8 +24,9 @@
 display: block;
 margin-left: auto;
 margin-right: auto;
-background-color: rgba(1, 7, 8, 0.1);
+background-color: rgba(1, 7, 8, 0.4);
 width: 700px;
+padding-left: 15px;
 }
 
 .navigation-bar h1{
