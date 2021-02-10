@@ -41,8 +41,10 @@ function getPrice() {
         .then(function (load) {
             console.log(load.Rent)
             var result = load.Rent
-            result = Math.round(result/1000) * 1000 ;
-            var result2 = result + 15000
+            result = (Math.round(result/1000) * 1000);
+            var result2 = result + 15000;
+            result = result.toLocaleString('en')
+            result2 = result2.toLocaleString('en')
             newPrice.innerText = `From ₦${result} - ₦${result2}`
         })
         console.log(payloader)
