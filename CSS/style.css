@@ -528,6 +528,31 @@ li a{
     position: relative;
 }
 
+@media only screen and (max-width:415px){
+    .illustration h2{
+        text-align: center;
+        padding-top: 30px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        padding-left: 18px;
+    }
+
+    .illustration p{
+        margin-top: 5px;
+        /* padding: 0px 15px; */
+        padding-top: 10px;
+        padding-bottom: 15px;
+        /* position: relative; */
+        text-align: center;
+        /* text-justify: auto; */
+        font-size: 16px;
+        width: 242px;
+        padding-left: 55px;
+        
+    }
+
+}
+
 @media only screen and (max-width:350px){
     .container{
         height: 800px;
@@ -557,19 +582,3 @@ li a{
 
 }
    
-
-/* .collection{
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    align-content: center;
-    padding-left: 15px;
-}
-
-.illustration{
-    
-    margin-left: 10px;
-    background-color:#ffffff;
-    height: 450px;
-    width: 400px;
-} */
