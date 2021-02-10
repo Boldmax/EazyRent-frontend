@@ -136,7 +136,6 @@ li a{
     color: gray;
 }
 
-
 .second-page{
     display: block;
     background-color: #ffffff;
@@ -183,7 +182,6 @@ li a{
     text-justify: auto;
     font-size: 16px;
     width: 330px;
-    /* padding-left: 30px; */
 }
 
 .illustration img{
@@ -316,7 +314,7 @@ li a{
         margin-left: auto;
         margin-right: auto;
         letter-spacing: 1px;
-        background-color: rgba(1, 7, 8, 0.1);
+        background-color: rgba(1, 7, 8, 0.09);
     }
     
     .message p{
@@ -408,7 +406,6 @@ li a{
         position: relative;
         background-color: #ffffff;
         padding-left: 20px;
-        /* margin-left: -20px; */
         overflow: hidden;
     }
 
@@ -428,7 +425,6 @@ li a{
         padding-top: 30px;
         font-size: 22px;
         letter-spacing: 1px;
-        /* padding-left: 28px; */
     }
 
     .illustration p{
