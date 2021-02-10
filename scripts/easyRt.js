@@ -11,21 +11,22 @@ const houseType = document.getElementById('house-type');
 const noRoom = document.getElementById('no-rooms');
 const home = document.querySelector('.home');
 const propertypage = document.querySelector("#propertyPage");
-const newRoomNo = rooms.options[rooms.selectedIndex].value;
-const newPlace = place.options[place.selectedIndex].text;
 
- // payload object
-function payload(room, location){
-        this.rooms = room;
-        this.location= location
-    };
 
-    // new payload creator
+// payload object
+function payload(room, location) {
+    this.rooms = room;
+    this.location = location
+};
+
+
+
+// API fetch handler
+function getPrice() {
+    var newRoomNo = rooms.options[rooms.selectedIndex].value;
+    var newPlace = place.options[place.selectedIndex].text;
     var payloader = new payload(newRoomNo, newPlace);
-   
-    // API fetch handler
-   function provide(){
-   fetch('http://lagos-rent-api.herokuapp.com/predict/', {
+    fetch('http://lagos-rent-api.herokuapp.com/predict/', {
         method: "POST",
         body: JSON.stringify(payloader),
         headers: {
@@ -33,28 +34,29 @@ function payload(room, location){
             "Content-Type": "application/json"
         },
     })
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(load){
-        console.log(load.Rent)
-        var result = load.Rent
-        var result2 = result + 50000
-        newPrice.innerText = `From ₦${result} - ₦${result2}`
-    })
-}  
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (load) {
+            console.log(load.Rent)
+            var result = load.Rent
+            result = Math.round(result/1000) * 1000 ;
+            var result2 = result + 15000
+            newPrice.innerText = `From ₦${result} - ₦${result2}`
+        })
+        console.log(payloader)
+}
 
 // Submit button handler
 submited.addEventListener("click", () => {
     console.log('button is working')
-    console.log(newRoomNo)
-    provide()
+    getPrice()
     changeDetails();
     changePage();
     //changePrice();
 });
 
- // Property Page loader 1
+// Property Page loader 1
 function newPage() {
     window.location.href = "propertypage.html"
 }
